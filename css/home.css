@@ -170,7 +170,7 @@ span .p1 {
 }
 
 .section3-p {
-  font-size: 55px;
+  font-size: 52px;
   font-family: sans-serif;
   font-weight: bolder;
   color: #4f5e66;
@@ -324,3 +324,35 @@ span .p1 {
   padding-top: 25px;
 }
 /* end of section 5 */
+
+/* start section 6 */
+.section-6 {
+  width: 100%;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 47% 47%;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  padding-top: 70px;
+}
+
+.section-6 div:nth-child(1) {
+  text-align: center;
+}
+
+.section-6 div > p {
+  font-size: 20px;
+  color: #727e85;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.section-6 div:nth-child(4) {
+  text-align: center;
+}
+.section-6 div:nth-child(3) {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+/* end of section 6 */
