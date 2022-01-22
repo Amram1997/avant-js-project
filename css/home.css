@@ -165,7 +165,7 @@ span .p1 {
 
 .section-3 {
   width: 100%;
-  height: 1200px;
+  height: 1550px;
   text-align: center;
 }
 
@@ -256,3 +256,71 @@ span .p1 {
 }
 
 /* end of section 3 */
+
+/*  start section 4 */
+.section-4 {
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding-top: 75px;
+}
+
+.section-4 h1 {
+  font-size: 250px;
+  letter-spacing: 10px;
+  color: #2382ce;
+}
+
+.section4-p1 {
+  font-size: 34px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: #727e85;
+  padding-top: 50px;
+}
+
+.section-4 div {
+  margin-bottom: 50px;
+  margin-top: 55px;
+}
+/*  end of section 4 */
+
+/*  start section 5 */
+.section-5 {
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  padding-top: 80px;
+}
+.section-5-div1 {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+}
+
+.section5-div-left {
+  width: 50%;
+  height: 300px;
+}
+
+.section5-div-right {
+  position: relative;
+  width: 50%;
+  height: 300px;
+  text-align: left;
+  padding-top: 20px;
+}
+.section5-div-right div {
+  position: absolute;
+  left: 0;
+}
+
+.section5-div-right p {
+  color: #727e85;
+  font-size: 25px;
+  padding-top: 25px;
+}
+/* end of section 5 */
