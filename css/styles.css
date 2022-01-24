@@ -1,0 +1,48 @@
+body {
+    background-color: #97f5be77  
+}
+
+img {
+    padding: 1px;
+    width: 100px;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: left
+}
+.image {
+    flex-basis: 10%
+}
+
+.text {
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    color: rgb(26, 17, 104);
+    
+}
+
+.content {
+    padding: 30px;
+}
+
+h2 {
+    background-color: #050441;
+    color: #FFFFFF;
+    text-align: left;
+    width: 350px;
+    height: auto;
+    
+}
+
+h3 {
+    background-color: #5e5e5f; 
+    color: #FFFFFF;
+    text-align: left;
+    width: 350px;
+    height: auto;
+}
+
