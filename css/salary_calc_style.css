@@ -5,3 +5,7 @@ body {
 #loading, #results {
     display: none;
 }
+
+p {
+    color: tomato;
+}
