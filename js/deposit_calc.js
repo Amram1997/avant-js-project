@@ -1,5 +1,5 @@
 
-document.querySelector('#loan-form').addEventListener('submit', function(e){
+document.querySelector('#deposit-form').addEventListener('submit', function(e){
     document.querySelector('#results').style.display = 'none';
     document.querySelector('#loading').style.display = 'block';
 
@@ -14,22 +14,46 @@ function calculateResults(){
     const amount = document.getElementById('amount');
     const interest = document.getElementById('interest');
     const years = document.getElementById('years');
-    const monthlyPayment = document.getElementById('monthly-payment');
-    const totalPayment = document.getElementById('total-payment');
-    const totalInterest = document.getElementById('total-interest');
+    const earnedInterest = document.getElementById('earned-interest');
+    const incomeTax = document.getElementById('income-tax');
+    const repayAmount = document.getElementById('repay-amount');
+    const selectedInterest = document.getElementById('interest-select');
+    const selectedLegalStatus = document.getElementById('legalStatus');
 
     const principle = parseFloat(amount.value);
-    const calculatedInterest = parseFloat(interest.value) / 100 / 12;
-    const calculatedPayments = parseFloat(years.value) * 12;
-    
-    
-    const x = Math.pow(1 + calculatedInterest, calculatedPayments);
-    const monthly = (principle * x * calculatedInterest) / (x - 1);
+    const period = parseFloat(years.value)
+    const calculatedInterest = function() {
+        let res = 0;
+        let p = principle;
+        let r = parseFloat(interest.value) / 100;
+        let n = 12;
+        let t = years.value;
+        if (selectedInterest.value == "compInt") {
+            res = (p*(1+(r/n))**(n*t))-p
+            return res
+        }else {
+            res = parseFloat(interest.value)/100*period*principle;
+            return res
+        }
+    };
 
-    if(isFinite(monthly)){
-        monthlyPayment.value = monthly.toFixed(2);
-        totalPayment.value = (monthly * calculatedPayments).toFixed(2);
-        totalInterest.value = ((monthly * calculatedPayments) - principle).toFixed(2);
+    const calculatedIncomeTax = function() {
+        let res = 0;
+        if (selectedLegalStatus.value == "No") {
+            res = parseFloat(calculatedInterest())*0.1;
+            return res
+        }else {
+            res = 0
+            return res
+        }    
+    };
+    const calculatedRepayAmount = parseFloat(principle+calculatedInterest()-calculatedIncomeTax());
+    
+    
+    if(isFinite(calculatedRepayAmount)){
+        earnedInterest.value = calculatedInterest().toFixed(2);
+        incomeTax.value = calculatedIncomeTax().toFixed(2);
+        repayAmount.value = calculatedRepayAmount.toFixed(2);
 
        
         document.querySelector('#results').style.display = 'block';
