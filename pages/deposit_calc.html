@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loan Calculator</title>
+    <title>Deposit Calculator</title>
     <link rel="icon" href="/images/logo1.jpg">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +16,7 @@
             <div class="col-6 mx-auto">
                 <div class="card card-body text-center mt-5">
                     <h1 class="heading display-5 pb-3">Bank Deposit Calculator</h1>
-                    <form id="loan-form">
+                    <form id="deposit-form">
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -37,9 +37,9 @@
                             <input type="text" class="form-control" id="years" placeholder="Years of Investment">
                         </div>
                         <div class="form-group">
-                            <label for="interest" style="color: brown;"><h5>Select type of Interest</h5></label>
+                            <label style="color: brown;"><h5>Select type of Interest</h5></label>
                             <select id="interest-select">
-                                <option value="simpleInt">Simple Interest</option>
+                                <option value="simInt">Simple Interest</option>
                                 <option value="compInt">Compound Interest</option>
                             </select>
                         </div>
@@ -82,7 +82,7 @@
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Repay amount</span>
+                                    <span class="input-group-text">Repayment amount</span>
                                 </div>
                                 <input type="text" class="form-control" id="repay-amount" disabled>
                             </div>
@@ -93,6 +93,6 @@
         </div>
     </div>
 
-    <script src="/js/deposit_calc.js"></script>
+    <script src="../js/deposit_calc.js"></script>
 </body>
 </html>
