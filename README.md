@@ -11,6 +11,8 @@
 * [Project link](https://github.com/Amram1997/avant-js-project.git)
 
 ## Project Status  <hr/>
+This is a **Frontend Bootcamp** project, that provided by **Armenian Code Academy**.
+
 This project is currently: *Complete*
 
 ## Features <hr/> 
@@ -20,15 +22,23 @@ Returns link to the main page of the website
 
 -  ### Main page > Financial Calculator 
 Financial calculation tools with features of :
--  Financial Calculator > Borrowing and Investment
+-  Borrowing and Investment
 >> - *Loan Calculator*
->>> Has 3 input fields: Loan amount, interest rate and years. Calculation result has 3 fields: Monthly Payment, Total Payment and Total Interest.
+>>> **Has 3 input fields**: Loan amount, interest rate and years.\
+ **Calculation result has 3 fields**: Monthly Payment, Total Payment and Total Interest.
 >> - *Mortgage Calculator*
+>>> **Has input fields**: Home Value, Down Payment, Loan Amount, Interest Rate, Loan Term by years, Property Tax, PMI(Private mortgage insurance):\
+**Calculation** result has fields of: Monthly payment(with its openings), Loan breakdown chart.
 >> - *Deposit Calculator*
--  Financial Calculator > Salary Calculator
+>>> **Has 3 input fields and 2 selectors**: Deposit amount, Interest rate and Years. **Selectors**: Type of interest(Simple or compound) and Entity type (Individual or company).\
+**Calculation result has 3 fields**: Earned interest, Income tax of 10% (if it is company) and Repayment amount. 
+-  Salary Calculator
 >> - *Salary Calculator*
--  Financial Calculator > Financial Ratios
+>>> **Has 1 input field and 2 selectors**: Monthly gross salary. **Selectors**: Pesion system and Segment:\
+**Calculation result has 4 fields**:Income Tax, Social fee, Stamp fee and Net salary.
+-  Financial Ratios
 >> - *Financial Ratios*
+>>> Will be developed late.
 -  ### Main page > Contact
 Has input features with fields of contact person *email address* and *message*. 
 -  ### *Main page > Apply in Minutes*
@@ -46,7 +56,7 @@ Built with:
 - CSS
 - JAVASCRIPT
 ## Project Collaborators <hr/>
-This is a **Frontend Bootcamp** project, that provided by **Armenian Code Academy** and was implemented by:
+This project was implemented by:
  Name | Github link |
 | ----------- | ----------- |
 | Vahe Hakobyan | [vahehak93](https://github.com/vahehak93) |
