@@ -22,11 +22,13 @@
 .nav-menu ul {
   display: flex;
   justify-content: flex-end;
-  margin-right: 40px;
+  margin-right: 0px;
 }
-
+.log-in {
+  border: 1px solid #1e7dc7;
+}
 .nav-menu ul li {
-  padding-left: 150px;
+  padding-left: 70px;
   list-style: none;
   padding-top: 25px;
 }
