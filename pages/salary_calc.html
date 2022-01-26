@@ -17,26 +17,80 @@
   </head>
   <body class="bg-dark">
     <div class="container">
-      <div class="row">
-        <div class="col-6 mx-auto">
-          <div class="card card-body text-center mt-5">
-            <h1 class="heading display-5 pb-3">Salary Calculator</h1>
-            <p>
-              * The calculation is made in accordance with the Tax Code of the
-              Republic of Armenia
-            </p>
-            <form id="salary-form">
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">Amount in ֏</span>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="amount"
-                    placeholder="Monthly gross salary"
-                  />
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Salary Calculator</h1>
+                    <p>*  The calculation is made in accordance with the Tax Code of the Republic of Armenia</p>
+                    <form id="salary-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Amount in ֏</span>
+                                </div>
+                                <input type="text" class="form-control" id="amount" placeholder="Monthly gross salary">
+                            </div>
+                        </div>
+                        <div>
+                            <label style="color: brown;"><span>Do you participate in the mandatory funded pension system?</span> </label>
+                            <select id="pension-select">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="color: brown;"><span>Are you falling under the tax allowance IT segment?</span> </label>
+                            <select id="it-select">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                        </div>
+                    </form>
+
+                    <!-- Loading Animation -->
+                    <div id="loading">
+                        <img src="/images/loading.gif" alt="Loading Animation">
+                    </div>
+
+                    <!-- Results -->
+                    <div id="results" class="pt-4">
+                        <h5>Results</h5>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Income Tax</span>
+                                </div>
+                                <input type="text" class="form-control" id="income-tax" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Social fee</span>
+                                </div>
+                                <input type="text" class="form-control" id="social-fee" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Stamp fee</span>
+                                </div>
+                                <input type="text" class="form-control" id="stamp-fee" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">NET SALARY</span>
+                                </div>
+                                <input type="text" class="form-control" id="net-salary" disabled>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
               <div class="form-group">
