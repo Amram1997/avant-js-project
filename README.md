@@ -61,4 +61,4 @@ This project was implemented by:
 | ----------- | ----------- |
 | Vahe Hakobyan | [vahehak93](https://github.com/vahehak93) |
 | Amram Ananyan | [Amram1997](https://github.com/Amram1997) |
-| Narek Ghazazyan | #TODO |
+| Narek Ghazazyan | [NarGhCat](https://github.com/NarGhCat) |
