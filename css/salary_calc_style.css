@@ -1,11 +1,12 @@
 body {
-    background-image: url(/images/logo2.jpg);
+  background-image: url("../images/logo2.jpg");
 }
 
-#loading, #results {
-    display: none;
+#loading,
+#results {
+  display: none;
 }
 
 p {
-    color: tomato;
+  color: tomato;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Loan Calculator</title>
+    <title>Deposit Calculator</title>
     <link rel="icon" href="../images/logo1.jpg" />
 
     <link
@@ -13,15 +13,15 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/loan_calc_style.css" />
+    <link rel="stylesheet" href="/css/deposit_calc_style.css" />
   </head>
   <body class="bg-dark">
     <div class="container">
       <div class="row">
         <div class="col-6 mx-auto">
           <div class="card card-body text-center mt-5">
-            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
-            <form id="loan-form">
+            <h1 class="heading display-5 pb-3">Bank Deposit Calculator</h1>
+            <form id="deposit-form">
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -31,7 +31,7 @@
                     type="text"
                     class="form-control"
                     id="amount"
-                    placeholder="Loan Amount"
+                    placeholder="Deposit Amount"
                   />
                 </div>
               </div>
@@ -44,7 +44,7 @@
                     type="text"
                     class="form-control"
                     id="interest"
-                    placeholder="Interest"
+                    placeholder="Interest rate"
                   />
                 </div>
               </div>
@@ -53,8 +53,26 @@
                   type="text"
                   class="form-control"
                   id="years"
-                  placeholder="Years To Repay"
+                  placeholder="Years of Investment"
                 />
+              </div>
+              <div class="form-group">
+                <label style="color: brown"
+                  ><h5>Select type of Interest</h5></label
+                >
+                <select id="interest-select">
+                  <option value="simInt">Simple Interest</option>
+                  <option value="compInt">Compound Interest</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="legalStatus" style="color: brown"
+                  ><h5>Are you a legal entity?</h5></label
+                >
+                <select id="legalStatus">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
               </div>
               <div class="form-group">
                 <input
@@ -76,12 +94,12 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text">Monthly Payment</span>
+                    <span class="input-group-text">Interest earned</span>
                   </div>
                   <input
                     type="text"
                     class="form-control"
-                    id="monthly-payment"
+                    id="earned-interest"
                     disabled
                   />
                 </div>
@@ -89,12 +107,12 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text">Total Payment</span>
+                    <span class="input-group-text">Income tax (10%)</span>
                   </div>
                   <input
                     type="text"
                     class="form-control"
-                    id="total-payment"
+                    id="income-tax"
                     disabled
                   />
                 </div>
@@ -102,12 +120,12 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text">Total Interest</span>
+                    <span class="input-group-text">Repayment amount</span>
                   </div>
                   <input
                     type="text"
                     class="form-control"
-                    id="total-interest"
+                    id="repay-amount"
                     disabled
                   />
                 </div>
@@ -118,6 +136,6 @@
       </div>
     </div>
 
-    <script src="../js/loan_calc.js"></script>
+    <script src="../js/deposit_calc.js"></script>
   </body>
 </html>
