@@ -18,23 +18,27 @@
           />
         </li>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="">Calculator</a></li>
+        <li><a href="">Financial Calculator</a></li>
         <li><a href="">Contact</a></li>
         <li><a href="">Login</a></li>
       </ul>
     </nav>
     <section class="section-1">
       <h1>Registration</h1>
-      <h3>Register for free</h3>
+      <h3 id="h33">Register for free</h3>
       <div class="registr-div">
         <form action="">
-          <input type="text" placeholder="Firs name" />
-          <input type="text" placeholder="Last name" />
-          <input type="email" placeholder="Email" />
-          <input type="date" />
-          <input type="password" placeholder="password" />
-          <input type="password" placeholder="confirm password" />
-          <button id="regitser_btn" class="btn_reg">Register</button>
+          <input type="text" placeholder="Firs name" id="firstName" />
+          <input type="text" placeholder="Last name" id="lastName" />
+          <input type="email" placeholder="Email" id="userEmail" />
+          <input type="date" id="userDate" />
+          <input type="password" placeholder="password" id="userPassword" />
+          <input
+            type="password"
+            placeholder="confirm password"
+            id="confirmPassword"
+          />
+          <button id="registerBtn" class="btn_reg">Register</button>
         </form>
       </div>
     </section>
@@ -57,5 +61,6 @@
       </div>
       <p>© Copyright 2021 Avant, LLC.</p>
     </footer>
+    <script src="../js/registr.js" defer></script>
   </body>
 </html>
