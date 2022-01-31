@@ -1,0 +1,19 @@
+.title {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    color: #2f3435;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: 30%;
+    height: 250px;
+    width: 500px;
+}
+
+h3 {
+    text-align: center;
+}
+
