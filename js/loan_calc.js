@@ -1,63 +1,57 @@
+document.querySelector("#loan-form").addEventListener("submit", function (e) {
+  document.querySelector("#results").style.display = "none";
+  document.querySelector("#loading").style.display = "block";
 
-document.querySelector('#loan-form').addEventListener('submit', function(e){
-    document.querySelector('#results').style.display = 'none';
-    document.querySelector('#loading').style.display = 'block';
+  setTimeout(calculateResults, 2000);
 
-    setTimeout(calculateResults, 2000);
-
-    e.preventDefault(0);0. 
+  e.preventDefault(0);
+  0;
 });
 
+function calculateResults() {
+  const amount = document.getElementById("amount");
+  const interest = document.getElementById("interest");
+  const years = document.getElementById("years");
+  const monthlyPayment = document.getElementById("monthly-payment");
+  const totalPayment = document.getElementById("total-payment");
+  const totalInterest = document.getElementById("total-interest");
 
-function calculateResults(){
-  
-    const amount = document.getElementById('amount');
-    const interest = document.getElementById('interest');
-    const years = document.getElementById('years');
-    const monthlyPayment = document.getElementById('monthly-payment');
-    const totalPayment = document.getElementById('total-payment');
-    const totalInterest = document.getElementById('total-interest');
+  const principle = parseFloat(amount.value);
+  const calculatedInterest = parseFloat(interest.value) / 100 / 12;
+  const calculatedPayments = parseFloat(years.value) * 12;
 
-    const principle = parseFloat(amount.value);
-    const calculatedInterest = parseFloat(interest.value) / 100 / 12;
-    const calculatedPayments = parseFloat(years.value) * 12;
-    
-    
-    const x = Math.pow(1 + calculatedInterest, calculatedPayments);
-    const monthly = (principle * x * calculatedInterest) / (x - 1);
+  const x = Math.pow(1 + calculatedInterest, calculatedPayments);
+  const monthly = (principle * x * calculatedInterest) / (x - 1);
 
-    if(isFinite(monthly)){
-        monthlyPayment.value = monthly.toFixed(2);
-        totalPayment.value = (monthly * calculatedPayments).toFixed(2);
-        totalInterest.value = ((monthly * calculatedPayments) - principle).toFixed(2);
+  if (isFinite(monthly)) {
+    monthlyPayment.value = monthly.toFixed(2);
+    totalPayment.value = (monthly * calculatedPayments).toFixed(2);
+    totalInterest.value = (monthly * calculatedPayments - principle).toFixed(2);
 
-       
-        document.querySelector('#results').style.display = 'block';
-        document.querySelector('#loading').style.display = 'none';
-    } else {
-
-        showError('Please check your inputs');
-    }
+    document.querySelector("#results").style.display = "block";
+    document.querySelector("#loading").style.display = "none";
+  } else {
+    showError("Please check your inputs");
+  }
 }
 
-function showError(error){
+function showError(error) {
+  document.querySelector("#results").style.display = "none";
+  document.querySelector("#loading").style.display = "none";
 
-    document.querySelector('#results').style.display = 'none';
-    document.querySelector('#loading').style.display = 'none';
+  const errorDiv = document.createElement("div");
 
-    const errorDiv = document.createElement('div');
+  const card = document.querySelector(".card");
+  const heading = document.querySelector(".heading");
 
-    const card = document.querySelector('.card');
-    const heading = document.querySelector('.heading');
+  errorDiv.className = "alert alert-danger";
 
-    errorDiv.className = 'alert alert-danger';
-    
-    errorDiv.appendChild(document.createTextNode(error));
-    card.insertBefore(errorDiv, heading);
+  errorDiv.appendChild(document.createTextNode(error));
+  card.insertBefore(errorDiv, heading);
 
-    setTimeout(clearError, 4000);
+  setTimeout(clearError, 4000);
 }
 
-function clearError(){
-    document.querySelector('.alert').remove();
+function clearError() {
+  document.querySelector(".alert").remove();
 }
